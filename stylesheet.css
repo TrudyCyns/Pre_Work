@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #efefef;
+    position: relative;
+    cursor: default;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav a:hover, .footer-menu a:hover {
+    color: #ff3b3f;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    min-height: 75px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #caebf2;
+    width: 100%;
+    box-shadow: 0px 0px 10px 0px;
+}
+
+.logo {
+    width: 40vw;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+nav {
+    font-weight: 500;
+}
+
+nav ul {
+    width: 35vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px
+}
+
+.info-slate {
+    padding: 10px;
+    background-color: #caebf2;
+    width: 95%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.info {
+    padding: 10px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.info i {
+    padding: 10px;
+}
+
+.borders {
+    border-right: 1px black solid;
+    border-left: 1px black solid;
+}
+
+i {
+    float: left;
+    color: #ff3b3f;
+}
+
+.lessons-slate {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 95%;
+    padding: 20px 10px;
+    border-bottom: 1px lightgray solid;
+}
+
+.web-app {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.web-i {
+    display: flex;
+    flex-direction: row;
+    border: 1px black solid;
+    border-radius: 35px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.web-i:hover {
+    background-color: lightgrey;
+}
+
+.web-i p {
+    margin-left: 10px;
+}
+
+.lessons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lesson-tile {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    align-items: space-evenly;
+    margin: 10px;
+}
+
+.lesson-tile img {
+    width: 100%;
+    height: 300px;
+}
+
+.lesson-tile h3 {
+    padding: 10px;
+}
+
+footer {
+    width: 100%;
+    background-color: #caebf2;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-footer {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    align-items: flex-start;
+
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.footer-section li,
+.footer-section h3 {
+    padding: 5px;
+    text-align: left;
+}
+
+.footer-section img,
+.footer-section p {
+    padding: 10px;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    justify-items: flex-start;
+    align-items: flex-start;
+    margin-left: 10%;
+}
+.footer-cop {
+    margin-bottom: 20px;
+}
+.footer-cop span {
+    color: #ff3b3f;
+}
+
+.footer-cop p {
+    padding: 30px 0px 10px 0px;
+    font-weight: 300;
+    
+}
+
+.social-logo {
+    width: 100%;
+    height: 75px;
+}
+
+@media (max-width: 650px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        margin-top: 15px;
+        width: 100%;
+        position: relative;
+    }
+
+    .logo img {
+        margin: 0 auto;
+    }
+
+    nav {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 50px;
+    }
+
+    nav li {
+        padding-bottom: 5px;
+    }
+
+    nav>ul {
+        flex-direction: column;
+    }
+
+    .info-slate {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .borders {
+        border-right: 0px;
+        border-left: 0px;
+        border-top: 1px black solid;
+        border-bottom: 1px black solid;
+    }
+
+    .lessons {
+        flex-direction: column;
+        width: auto;
+    }
+
+    .lesson-tile {
+        width: auto;
+    }
+
+    .main-footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+
+    .footer-section {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+    }
+    .footer-section li,
+.footer-section h3 {
+    text-align: center;
+}
+}
