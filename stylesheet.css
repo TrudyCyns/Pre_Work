@@ -21,7 +21,8 @@ a {
     cursor: pointer;
 }
 
-nav a:hover, .footer-menu a:hover {
+nav a:hover,
+.footer-menu a:hover {
     color: #ff3b3f;
 }
 
@@ -68,6 +69,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    align-self: center;
     text-align: center;
     margin-top: 100px
 }
@@ -144,7 +146,8 @@ i {
     flex-wrap: wrap;
 }
 
-.lesson-tile {
+.lesson-tile,
+.lang-tile {
     display: flex;
     width: 30%;
     flex-direction: column;
@@ -161,6 +164,198 @@ i {
     padding: 10px;
 }
 
+.wdc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: center;
+}
+
+.wdc-heading {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    padding: 20px 30px;
+}
+
+.wdc-heading span {
+    font-weight: 500;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; */
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 325px;
+    background-color: #caebf2;
+    color: #141414;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-size: 12px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    top: 90%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.wdc-tile {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 95%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.wdc-img {
+    width: 40vw;
+}
+
+.wdc-img img {
+    border-radius: 15px;
+}
+
+.wdc-info {
+    text-align: left;
+    font-size: 18px;
+    width: 50vw;
+    padding: 50px;
+}
+
+.wdc-info h2,
+.wdcr-tile h3 {
+    padding: 10px;
+    text-align: center;
+}
+
+.wdc-info p,
+.lang-tile p {
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.wdc-footer {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.wdcr-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin: 5px;
+}
+
+.wdc-skills {
+    width: 110px;
+    background-color: #adcde1;
+    text-align: center;
+    align-content: center;
+}
+
+.wdc-skills span,
+.wdcr-skills span {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    font-weight: 200;
+}
+
+.wdcr-tile {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.wdcr-tile img {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.wdcr-skills {
+    width: 110px;
+}
+
+.wdc-footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.wdc-footer li,
+.wdc-footer i {
+    margin: 5px;
+    padding: 5px;
+}
+
+.lang-tile {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.lang-tile a {
+    height: 100%;
+}
+
+.lang-tile img {
+    border-radius: 15px;
+    width: 100%;
+    height: 200px;
+}
+
+.lang-tile:hover {
+    box-shadow: 3px 3px gainsboro;
+}
+
+.lang-skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Footer section */
 footer {
     width: 100%;
     background-color: #caebf2;
@@ -208,9 +403,11 @@ footer {
     align-items: flex-start;
     margin-left: 10%;
 }
+
 .footer-cop {
     margin-bottom: 20px;
 }
+
 .footer-cop span {
     color: #ff3b3f;
 }
@@ -218,7 +415,7 @@ footer {
 .footer-cop p {
     padding: 30px 0px 10px 0px;
     font-weight: 300;
-    
+
 }
 
 .social-logo {
@@ -281,6 +478,47 @@ footer {
         width: auto;
     }
 
+    .wdc-tile,
+    .wdcr-tile {
+        flex-direction: column;
+        width: 90vw;
+    }
+
+    .wdc-img {
+        width: auto;
+    }
+
+    .wdc-info {
+        text-align: center;
+        font-size: 16px;
+        width: auto;
+    }
+
+    .wdc-footer {
+        flex-direction: column;
+    }
+
+    .wdc-skills,
+    .wdcr-skills {
+        width: 100%;
+        text-align: center;
+        align-content: center;
+    }
+    .lang-tile {
+        width: 85vw;
+    }
+    .lang-tile a {
+        display: flex;
+        flex-direction: row;
+    }
+    .lang-info {
+        width: 55vw;
+        align-self: center;
+    }
+    .lang-tile img {
+        height: 20vh;
+        width: 25vw
+    }
     .main-footer {
         flex-direction: column;
         justify-content: center;
@@ -296,8 +534,9 @@ footer {
     .footer-menu {
         flex-direction: column;
     }
+
     .footer-section li,
-.footer-section h3 {
-    text-align: center;
-}
+    .footer-section h3 {
+        text-align: center;
+    }
 }
