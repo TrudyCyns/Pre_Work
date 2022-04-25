@@ -2,134 +2,573 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>Refactory - Dashboard</title>
+    <title>Refactory - Slide Library</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="fontawesome-free-6.1.1-web\css\all.min.css">
 </head>
 
 <body>
-    <header>
+    <header class="slide-header">
         <div class="logo">
             <img src="REFACTORY_free.png" alt="Refactory Logo">
         </div>
-        <nav>
-            <ul>
-                <li><a href="courses.html" style="color: #ff3b3f;">Courses</a></li>
-                <li><a href="slides.html">Slide Library</a></li>
-            </ul>
-        </nav>
+        <div class="search-box">
+            <input type="text" name="search" id="search" placeholder="Search Slides" />
+            <a href="##" class="icon">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
+        <div class="s-filter" tabindex="1">
+            <i class="fa fa-filter"></i>
+            <p>Filter</p>
+        </div>
     </header>
     <main>
-        <div class="info-slate">
-            <div class="info">
-                <i class="fa fa-user fa-2x"></i>
-                <h5>Nabasirye Gertrude</h5>
-                <p>Level 17</p>
+        <div class="slide-container">
+            <div class="slide-menu" id="menu">
+                <ul>
+                    <li>
+                        <div class="title">
+                            <img src="Assets/svgs/html.svg" alt="">
+                            <p>HTML</p>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="options">
+                            <div>
+                                <input type="checkbox" name="html-opt1" id="html-opt1">
+                                <label for="html-opt1">All</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="html-opt2" id="html-opt2">
+                                <label for="html-opt2">I</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="html-opt3" id="html-opt3">
+                                <label for="html-opt3">II</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="html-opt4" id="html-opt4">
+                                <label for="html-opt4">III</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="html-opt5" id="html-opt5">
+                                <label for="html-opt5">Flexbox</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="title">
+                            <img src="Assets/svgs/js.svg" alt="">
+                            <p>JS</p>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="options">
+                            <div>
+                                <input type="checkbox" name="js-opt1" id="js-opt1">
+                                <label for="js-opt1">All</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="js-opt2" id="js-opt2">
+                                <label for="js-opt2">I</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="js-opt3" id="js-opt3">
+                                <label for="js-opt3">II</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="js-opt4" id="js-opt4">
+                                <label for="js-opt4">III</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="js-opt5" id="js-opt5">
+                                <label for="js-opt5">IV</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="title">
+                            <img src="Assets/svgs/es6.svg" alt="">
+                            <p>JS (ES6)</p>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="options">
+                            <div>
+                                <input type="checkbox" name="jses-opt1" id="jses-opt1">
+                                <label for="jses-opt1">All</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="jses-opt2" id="jses-opt2">
+                                <label for="jses-opt2">I</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="jses-opt3" id="jses-opt3">
+                                <label for="jses-opt3">II</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="jses-opt4" id="jses-opt4">
+                                <label for="jses-opt4">III</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="jses-opt5" id="jses-opt5">
+                                <label for="jses-opt5">IV</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="jses-opt6" id="jses-opt6">
+                                <label for="jses-opt6">V</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="jses-opt7" id="jses-opt7">
+                                <label for="jses-opt7">VI</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="jses-opt8" id="jses-opt8">
+                                <label for="jses-opt8">VII</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="title">
+                            <img src="Assets/svgs/jq.svg" alt="">
+                            <p>jQuery</p>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="options">
+                            <div>
+                                <input type="checkbox" name="jq-opt1" id="jq-opt1">
+                                <label for="jq-opt1">All</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="jq-opt2" id="jq-opt2">
+                                <label for="jq-opt2">I</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="jq-opt3" id="jq-opt3">
+                                <label for="jq-opt3">II</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="jq-opt4" id="jq-opt4">
+                                <label for="jq-opt4">III</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="title">
+                            <img src="Assets/svgs/ruby.svg" alt="">
+                            <p>Ruby</p>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="options">
+                            <div>
+                                <input type="checkbox" name="ruby-opt1" id="ruby-opt1">
+                                <label for="ruby-opt1">All</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="ruby-opt2" id="ruby-opt2">
+                                <label for="ruby-opt2">I</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="ruby-opt3" id="ruby-opt3">
+                                <label for="ruby-opt3">II</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="ruby-opt4" id="ruby-opt4">
+                                <label for="ruby-opt4">III</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="ruby-opt5" id="ruby-opt5">
+                                <label for="ruby-opt5">IV</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="ruby-opt5" id="ruby-opt5">
+                                <label for="ruby-opt5">V</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="title">
+                            <img src="Assets/svgs/rails.svg" alt="">
+                            <p>Rails5</p>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="options">
+                            <div>
+                                <input type="checkbox" name="rails-opt1" id="rails-opt1">
+                                <label for="rails-opt1">All</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="rails-opt2" id="rails-opt2">
+                                <label for="rails-opt2">I</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="rails-opt3" id="rails-opt3">
+                                <label for="rails-opt3">II</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="rails-opt4" id="rails-opt4">
+                                <label for="rails-opt4">III</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="rails-opt5" id="rails-opt5">
+                                <label for="rails-opt5">IV</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="rails-opt6" id="rails-opt6">
+                                <label for="rails-opt6">V</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="rails-opt7" id="rails-opt7">
+                                <label for="rails-opt7">VI</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="rails-opt8" id="rails-opt8">
+                                <label for="rails-opt8">VII</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="rails-opt9" id="rails-opt9">
+                                <label for="rails-opt9">VIII</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="rails-opt10" id="rails-opt10">
+                                <label for="rails-opt10">IX</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="rails-opt11" id="rails-opt11">
+                                <label for="rails-opt11">X</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="rails-opt12" id="rails-opt12">
+                                <label for="rails-opt12">XI</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="title">
+                            <img src="Assets/svgs/php.svg" alt="">
+                            <p>PHP</p>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="options">
+                            <div>
+                                <input type="checkbox" name="php-opt1" id="php-opt1">
+                                <label for="php-opt1">All</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="php-opt2" id="php-opt2">
+                                <label for="php-opt2">I</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="php-opt3" id="php-opt3">
+                                <label for="php-opt3">II</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="php-opt4" id="php-opt4">
+                                <label for="php-opt4">III</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="php-opt5" id="php-opt5">
+                                <label for="php-opt5">IV</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="title">
+                            <img src="Assets/svgs/java.svg" alt="">
+                            <p>Java</p>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="options">
+                            <div>
+                                <input type="checkbox" name="java-opt1" id="java-opt1">
+                                <label for="java-opt1">All</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="java-opt2" id="java-opt2">
+                                <label for="java-opt2">I</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="java-opt3" id="java-opt3">
+                                <label for="java-opt3">II</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="java-opt4" id="java-opt4">
+                                <label for="java-opt4">III</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="java-opt5" id="java-opt5">
+                                <label for="java-opt5">IV</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="java-opt6" id="java-opt6">
+                                <label for="java-opt6">V</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="title">
+                            <img src="Assets/svgs/pyt.svg" alt="">
+                            <p>Python</p>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="options">
+                            <div>
+                                <input type="checkbox" name="python-opt1" id="python-opt1">
+                                <label for="python-opt1">All</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="python-opt2" id="python-opt2">
+                                <label for="python-opt2">I</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="python-opt3" id="python-opt3">
+                                <label for="python-opt3">II</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="python-opt4" id="python-opt4">
+                                <label for="python-opt4">III</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="python-opt5" id="python-opt5">
+                                <label for="python-opt5">IV</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="python-opt6" id="python-opt6">
+                                <label for="python-opt6">V</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="title">
+                            <img src="Assets/svgs/cmd.svg" alt="">
+                            <p>Command</p>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="options">
+                            <div>
+                                <input type="checkbox" name="cmd-opt1" id="cmd-opt1">
+                                <label for="cmd-opt1">I</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="title">
+                            <img src="Assets/svgs/git.svg" alt="">
+                            <p>Git</p>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="options">
+                            <div>
+                                <input type="checkbox" name="git-opt1" id="git-opt1">
+                                <label for="git-opt1">I</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="title">
+                            <img src="Assets/svgs/sql.svg" alt="">
+                            <p>SQL</p>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="options">
+                            <div>
+                                <input type="checkbox" name="sql-opt1" id="sql-opt1">
+                                <label for="sql-opt1">All</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="sql-opt2" id="sql-opt2">
+                                <label for="sql-opt2">I</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="sql-opt3" id="sql-opt3">
+                                <label for="sql-opt3">II</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="sql-opt4" id="sql-opt4">
+                                <label for="sql-opt4">III</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="sql-opt5" id="sql-opt5">
+                                <label for="sql-opt5">IV</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="title">
+                            <img src="Assets/svgs/sass.svg" alt="">
+                            <p>Sass</p>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="options">
+                            <div>
+                                <input type="checkbox" name="sass-opt1" id="sass-opt1">
+                                <label for="sass-opt1">I</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="title">
+                            <img src="Assets/svgs/go.svg" alt="">
+                            <p>Go</p>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="options">
+                            <div>
+                                <input type="checkbox" name="go-opt1" id="go-opt1">
+                                <label for="go-opt1">All</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="go-opt2" id="go-opt2">
+                                <label for="go-opt2">I</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="go-opt3" id="go-opt3">
+                                <label for="go-opt3">II</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="go-opt4" id="go-opt4">
+                                <label for="go-opt4">III</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="go-opt5" id="go-opt5">
+                                <label for="go-opt5">IV</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="title">
+                            <img src="Assets/svgs/node.svg" alt="">
+                            <p>Node.js</p>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="options">
+                            <div>
+                                <input type="checkbox" name="node-opt1" id="node-opt1">
+                                <label for="node-opt1">All</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="node-opt2" id="node-opt2">
+                                <label for="node-opt2">I</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="node-opt3" id="node-opt3">
+                                <label for="node-opt3">II</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="node-opt4" id="node-opt4">
+                                <label for="node-opt4">III</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="node-opt5" id="node-opt5">
+                                <label for="node-opt5">IV</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="node-opt6" id="node-opt6">
+                                <label for="node-opt6">V</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="node-opt7" id="node-opt7">
+                                <label for="node-opt7">VI</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="title">
+                            <img src="Assets/svgs/react.svg" alt="">
+                            <p>React</p>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="options">
+                            <div>
+                                <input type="checkbox" name="react-opt1" id="react-opt1">
+                                <label for="react-opt1">All</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="react-opt2" id="react-opt2">
+                                <label for="react-opt2">I</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="react-opt3" id="react-opt3">
+                                <label for="react-opt3">II</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="react-opt4" id="react-opt4">
+                                <label for="react-opt4">III</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="react-opt5" id="react-opt5">
+                                <label for="react-opt5">IV</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="info borders">
-                <i class="fa fa-book fa-2x"></i>
-                <h5>Exercises Cleared</h5>
-                <p>35</p>
-            </div>
-            <div class="info">
-                <i class="fa fa-medal fa-2x"></i>
-                <h5>Lessons Completed</h5>
-                <p>2</p>
-            </div>
-        </div>
-        <div class="lessons-slate">
-            <h3>Lessons in Progress</h3>
-            <div class="web-app">
-                <div class="web-i">
-                    <i class="fa fa-blog"></i>
-                    <p>Web</p>
-                </div>
-                <div class="web-i">
-                    <i class="fa fa-mobile-screen"></i>
-                    <p>App</p>
-                </div>
-            </div>
-            <div class="lessons">
-                <div class="lesson-tile">
-                    <img src="Assets\hcss.jpg" alt="">
-                    <h3>HTML & CSS</h3>
-                </div>
-                <div class="lesson-tile">
-                    <img src="Assets\git.jpg" alt="">
-                    <h3>Git</h3>
-                </div>
-            </div>
-        </div>
-        <div class="lessons-slate">
-            <h3>Completed Lessons</h3>
-            <div class="web-app">
-                <div class="web-i">
-                    <i class="fa fa-blog"></i>
-                    <p>Web</p>
-                </div>
-                <div class="web-i">
-                    <i class="fa fa-mobile-screen"></i>
-                    <p>App</p>
-                </div>
-            </div>
-            <div class="lessons">
-                <div class="lesson-tile">
-                    <img src="Assets\js.jpg" alt="">
-                    <h3>JavaScript</h3>
-                </div>
-                <div class="lesson-tile">
-                    <img src="Assets\nodejs.jpg" alt="">
-                    <h3>Node.js</h3>
-                </div>
-                <div class="lesson-tile">
-                    <img src="Assets\ruby.jpg" alt="">
-                    <h3>Ruby</h3>
-                </div>
+
+            <div class="slides" id="slides">
+                <input id="tab1" type="radio" name="tabs" checked>
+                <label for="tab1">All</label>
+                <input id="tab2" type="radio" name="tabs">
+                <label for="tab2">Favorites</label>
+                <section id="all">
+                    <div class="cont">
+                        <img src="Assets/slides/htc.PNG" alt="HTML slide">
+                        <img src="Assets/slides/jss.PNG" alt="JS slide">
+                        <img src="Assets/slides/jses.PNG" alt="JS (ES6) slide">
+                        <img src="Assets/slides/jqe.PNG" alt="jQuery slide">
+                        <img src="Assets/slides/rubys.PNG" alt="Ruby slide">
+                        <img src="Assets/slides/rails.PNG" alt="Rails5 slide">
+                        <img src="Assets/slides/phps.PNG" alt="PHP slide">
+                        <img src="Assets/slides/javas.PNG" alt="Java slide">
+                        <img src="Assets/slides/pys.PNG" alt="Python slide">
+                        <img src="Assets/slides/cmds.PNG" alt="Command slide">
+                        <img src="Assets/slides/gits.PNG" alt="Git slide">
+                        <img src="Assets/slides/sqls.PNG" alt="SQL slide">
+                        <img src="Assets/slides/sasss.PNG" alt="Sass slide">
+                        <img src="Assets/slides/gos.PNG" alt="Go slide">
+                        <img src="Assets/slides/nodes.PNG" alt="Node.js slide">
+                        <img src="Assets/slides/reacts.PNG" alt="React slide">
+                    </div>
+                </section>
+                <section id="faves">
+                    <div class="f-cont">
+                        <p>
+                            You don't have any favorite slides. Please add some!
+                        </p>
+                        <i class="fa fa-heart-circle-plus"></i>
+                    </div>
+                </section>
             </div>
         </div>
     </main>
-    <footer>
-        <div class="main-footer">
-            <div class="footer-section">
-                <img src="REFACTORY_free.png" alt="Refactory Logo">
-                <p>Check out our App</p>
-                <img src="Assets/playappstore.png" alt="Play and Appstore" class="social-logo">
-            </div>
-            <div class="footer-menu">
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="courses.html">Courses</a></li>
-                        <li>Plans</li>
-                        <li><a href="#">Dashboard</a></li>
-                        <li>Learning Roadmap</li>
-                        <li>Success Stories</li>
-                        <li>Blog</li>
-                        <li>Help</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Support</h3>
-                    <ul>
-                        <li>About Refactory</li>
-                        <li>Terms</li>
-                        <li>Privacy Policy</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Connect With Us</h3>
-                    <ul>
-                        <li>Facebook</li>
-                        <li>Twitter</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-cop">
-            <strong>&copy;2022 <span>Refactory </span></strong>
-        </div>
-    </footer>
 </body>
 
 </html>

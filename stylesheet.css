@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,6 +11,7 @@ body {
     background-color: #efefef;
     position: relative;
     cursor: default;
+    height: 100%;
 }
 
 li {
@@ -30,7 +33,7 @@ header {
     position: fixed;
     top: 0;
     min-height: 75px;
-    padding: 0px 20px;
+    padding: 0px 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -164,6 +167,7 @@ i {
     padding: 10px;
 }
 
+/* Courses CSS */
 .wdc {
     display: flex;
     flex-direction: column;
@@ -355,6 +359,245 @@ i {
     text-align: center;
 }
 
+/* Slide Library CSS */
+.slide-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    /* margin-top: auto; */
+    width: 100vw;
+}
+
+.slide-menu {
+    width: 30%;
+    overflow-y: auto;
+    max-height: 76vh;
+    background-color: white;
+}
+
+.slide-menu ul {
+    border-bottom: 1px solid lightgray;
+}
+
+.slide-menu ul li {
+    display: inline-block;
+    padding: 5px;
+    position: inherit;
+}
+
+.title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.title img {
+    width: 25%;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.title i {
+    margin-left: auto;
+}
+
+.options {
+    display: none;
+}
+
+.options div {
+    padding: 5px;
+}
+
+.slide-menu ul li:hover {
+    cursor: pointer;
+}
+
+.slide-menu ul li:active .options {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.slide-menu ul li:active ul li {
+    display: block;
+}
+
+.slide-menu-item {
+    /* position: relative; */
+    display: inline-block;
+    padding: 10px;
+}
+
+.smit ul {
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+    padding: 5px;
+}
+
+.slide-menu-item-btn {
+    cursor: pointer;
+}
+
+.slide-menu-selection {
+    display: none;
+}
+
+.slide-menu-item-btn:active .slide-menu-selection {
+    display: block;
+}
+
+/* Tabs, to be edited */
+.slides {
+    width: 70%;
+    justify-self: center;
+    padding: 10px;
+    overflow-y: auto;
+    height: 76vh;
+    background-color: whitesmoke;
+}
+
+.slides p {
+    margin: 0 0 20px;
+    line-height: 1.5;
+}
+
+.slides section {
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #ddd;
+}
+
+.slides input {
+    display: none;
+}
+
+.slides label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #bbb;
+    border: 1px solid transparent;
+    width: 45%;
+}
+
+.slides label:hover {
+    color: #ff3b3f;
+    cursor: pointer;
+}
+
+.slides input:checked+label {
+    color: #555;
+    border: 1px solid #ddd;
+    border-top: 2px solid #ff3b3f;
+    border-bottom: 1px solid #fff;
+}
+
+#tab1:checked~#all,
+#tab2:checked~#faves {
+    display: block;
+}
+
+.cont {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cont img {
+    border-radius: 10px;
+    height: 300px;
+    width: 50%;
+    padding: 5px;
+}
+
+.f-cont {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding: auto;
+}
+
+.f-cont i {
+    font-size: 400%;
+}
+
+/* Slide Library Specific header */
+.slide-header {
+    position: fixed;
+    top: 0;
+    min-height: 75px;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #caebf2;
+    width: 100%;
+    box-shadow: 0px 0px 10px 0px;
+}
+
+.slide-header .logo {
+    width: 30vw;
+}
+
+.slide-header .logo img {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+}
+
+/* Search box */
+.search-box {
+    position: relative;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    margin-right: 30px;
+    align-items: center;
+    background-color: whitesmoke;
+    border: 1px solid #ff3b3f;
+}
+.search-box input {
+    width: 300px;
+    border: none;
+    outline: none;
+    background: whitesmoke;
+    font-size: 1.1rem;
+    line-height: 40px;
+    color: black;
+}
+.icon {
+    float: right;
+    width: 40px;
+    font-size: 1.3rem;
+    height: 40px;
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Filter Invisible */
+.s-filter {
+    display: none;
+}
+
 /* Footer section */
 footer {
     width: 100%;
@@ -423,7 +666,10 @@ footer {
     height: 75px;
 }
 
-@media (max-width: 650px) {
+/* Media queries */
+@media screen and (max-width: 750px) {}
+
+@media screen and (max-width: 650px) {
     header {
         flex-wrap: wrap;
     }
@@ -434,7 +680,7 @@ footer {
         position: relative;
     }
 
-    .logo img {
+    .logo img, .slide-header .logo img {
         margin: 0 auto;
     }
 
@@ -504,21 +750,26 @@ footer {
         text-align: center;
         align-content: center;
     }
+
     .lang-tile {
         width: 85vw;
     }
+
     .lang-tile a {
         display: flex;
         flex-direction: row;
     }
+
     .lang-info {
         width: 55vw;
         align-self: center;
     }
+
     .lang-tile img {
         height: 20vh;
         width: 25vw
     }
+
     .main-footer {
         flex-direction: column;
         justify-content: center;
@@ -538,5 +789,58 @@ footer {
     .footer-section li,
     .footer-section h3 {
         text-align: center;
+    }
+    /* #menu {
+        display: none;
+    } */
+    .slides {
+        width: 100%;
+        overflow: inherit;
+    }
+    .cont {
+        flex-direction: column;
+    }
+    .cont img {
+        width: 100%;
+    }
+    
+    .search-box {
+        height: 40px;
+        width: 40vw;
+        padding: 5px;
+    }
+    .search-box input {
+        width: 33vw;
+        line-height: 35px;
+    }
+    .icon {
+        height: 30px; 
+    }
+    .s-filter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+    #menu {
+        display: none;
+        padding: 20px 0 0;
+    }
+    .menu-show:active + #menu {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+    .menu-show:active + #slides {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .slides label {
+        padding: 15px;
     }
 }
